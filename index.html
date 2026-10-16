@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Mensal Aulas Coletivas</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    
+    <h1>Calculadora de Aulas Coletivas</h1>
+
+    <p>Valor da hora-aula: R$ {{ "%.2f"|format(horaAula) }}</p>
+
+    <form method="POST">
+        <label>Aulas de 60 minutos:</label>
+        <input type="number" name="quantidade60" min="0" required
+               value="{{ quantidade60 }}">
+
+        <br><br>
+
+        <label>Aulas de 45 minutos:</label>
+        <input type="number" name="quantidade45" min="0" required
+               value="{{ quantidade45 }}">
+
+        <br><br>
+
+        <label>Aulas de 30 minutos:</label>
+        <input type="number" name="quantidade30" min="0" required
+               value="{{ quantidade30 }}">
+
+        <br><br>
+
+        <button type="submit">Calcular total</button>
+    </form>
+
+    <h2>Resultado do mês</h2>
+
+    <p>Total das aulas de 60 min: R$ {{ "%.2f"|format(subtotal60) }}</p>
+    <p>Total das aulas de 45 min: R$ {{ "%.2f"|format(subtotal45) }}</p>
+    <p>Total das aulas de 30 min: R$ {{ "%.2f"|format(subtotal30) }}</p>
+
+    <h2>Total geral: R$ {{ "%.2f"|format(total_geral) }}</h2>
+
+</body>
+</html>

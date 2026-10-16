@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #0b1120;
+    color: #f1f5f9;
+    min-height: 100vh;
+    padding: 22px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+body > p {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+form {
+    background: #151f32;
+    border: 1px solid #26344b;
+    border-radius: 18px;
+    padding: 24px 30px;
+    max-width: 600px;
+    margin: 0 auto 18px;
+    box-shadow: 0 15px 40px #00000030;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    background: #0b1120;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px #3b82f630;
+}
+
+form br {
+    display: none;
+}
+
+form label:not(:first-child) {
+    margin-top: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #3b82f6;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+h2 {
+    max-width: 600px;
+    margin: 18px auto 10px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+h2:last-of-type {
+    background: #132d29;
+    border: 1px solid #216b52;
+    border-radius: 16px;
+    padding: 20px;
+    color: #4ade80;
+    font-size: 26px;
+    overflow-wrap: anywhere;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    body {
+        padding: 22px 14px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    h2:last-of-type {
+        font-size: 23px;
+        padding: 18px;
+    }
+}
+
+/* Ajuste de espaçamento para caber em monitores */
+@media (min-width: 601px) and (min-height: 700px) {
+    body {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    h1 {
+        margin-bottom: 6px;
+    }
+
+    body > p {
+        margin-bottom: 14px;
+    }
+
+    form {
+        padding: 20px 28px;
+        margin-bottom: 12px;
+    }
+
+    form label:not(:first-child) {
+        margin-top: 12px;
+    }
+
+    button {
+        margin-top: 16px;
+        padding: 12px;
+    }
+
+    h2 {
+        margin-top: 12px;
+        margin-bottom: 8px;
+    }
+
+    h2:last-of-type {
+        padding: 16px 20px;
+    }
+}
